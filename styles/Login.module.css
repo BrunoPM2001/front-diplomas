@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 35px;
+  background-color: #f1f7fe;
+  border-radius: 20px;
+}
+.container > h1 {
+  text-align: center;
+  font-weight: 500;
+}
+.fullInput {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.fullInput  input {
+  flex: 1;
+  margin: 5px 0;
+  padding: 5px 0;
+  border: none;
+  outline: none;
+}
+.inputPass {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container > button {
+  margin: 15px 0 0 0;
+  padding: 15px;
+  background-color: #3e4684;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.container > button:hover {
+  background-color: #2a347e;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.errorLogin {
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0;
+  padding: 5px 15px;
+  background-color: #f55c4e;
+  color: #fff;
+  border: solid 1px #f43928;
+}
