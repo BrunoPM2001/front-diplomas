@@ -1,0 +1,7 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 26px;
+  background-color: #f1f7fe;
+}
