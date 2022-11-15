@@ -1,0 +1,30 @@
+.menuOpen {
+  width: 220px;
+}
+.menuClose {
+  width: 50px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #3e4684;
+}
+.icon {
+  text-align: center;
+  color: #fff;
+  margin: 15px 0;
+}
+.sidebarElement {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+.sidebarElement:hover {
+  background-color: #2a347e;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
