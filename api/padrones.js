@@ -1,15 +1,15 @@
-const getAllP = async (data) => {
+const getAllP = async () => {
   //  Petición a la API
   const res = await fetch('http://localhost:3005/api/padrones/getAll', {
     method: "GET",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkbmkiOjcyNDU4NzYyLCJhcGVsbGlkb3MiOiJQb3JyYXMiLCJub21icmVzIjoiQnJ1bm8iLCJwYXNzd29yZCI6ImJwb3JyYXMxMjMiLCJjYXJnbyI6IkFETUlOIiwiaWF0IjoxNjY5MTQzNjg0LCJleHAiOjE2NjkxNzI0ODR9.1jkGDxuZ0tox6WAhKW66Kx7msv4lvRdcglUdFct44EQ"
     }
   })
 
   //  Ver respuesta
   const response = await res.json()
-  return response
+  return response.padrones
 }
 
 const getOneP = async (data) => {
@@ -19,7 +19,7 @@ const getOneP = async (data) => {
   }), {
     method: "GET",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': localStorage.getItem("Token")
     }
   })
 
@@ -58,7 +58,7 @@ const restartP = async (data) => {
   }), {
     method: "PUT",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': localStorage.getItem("Token")
     }
   })
 
@@ -74,7 +74,7 @@ const deleteP = async (data) => {
   }), {
     method: "DELETE",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': localStorage.getItem("Token")
     }
   })
 
@@ -110,7 +110,7 @@ const previsualizarDiplomaP = async (data) => {
   }), {
     method: "POST",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': localStorage.getItem("Token")
     }
   })
   
@@ -127,7 +127,7 @@ const generarDiplomaP = async (data) => {
   }), {
     method: "PUT",
     headers: {
-      'Authorization': localStorage.getItem("token")
+      'Authorization': localStorage.getItem("Token")
     }
   })
 
