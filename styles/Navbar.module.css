@@ -1,7 +1,29 @@
-.navbar {
+.container {
+  position: relative;
+  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 26px;
-  background-color: #f1f7fe;
+  align-items: center;
+  padding: 28px 40px;
+  margin: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 7px rgb(0 0 0 / 24%);
+}
+.statusContainer {
+  position: relative;
+  z-index: 90;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 40px;
+  margin: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 7px rgb(0 0 0 / 24%);
+}
+.statusContainer > p {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
 }
