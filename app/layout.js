@@ -9,9 +9,9 @@ const font = Roboto({
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang='es' className={font.className}>
       <head></head>
-      <body className={font.className}>
+      <body>
         {children}
       </body>
     </html>
