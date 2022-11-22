@@ -12,11 +12,11 @@ export default function Login () {
   const router = useRouter()
 
   const handleLogin = async () => {
-    // if (await api_login(loginForm)) {
+    if (await api_login(loginForm)) {
       router.push('inicio')
-    // } else {
-    //   setError(true)
-    // }
+    } else {
+      setError(true)
+    }
   }
 
   return (
