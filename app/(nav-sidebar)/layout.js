@@ -1,21 +1,18 @@
-"use client"
-
-import { useSideHide } from "../../hooks/useSideHide"
-import Sidebar from "./Sidebar"
-import Navbar from "./Navbar"
+import Sidebar from "../../components/general/Sidebar"
+import Navbar from "../../components/general/Navbar"
+import StatusBar from "../../components/general/Statusbar"
 
 export default function RootLayout({ children }) {
-
-  const { openState, changeOpenState } = useSideHide()
 
   return (
     <html>
       <head></head>
       <body>
         <div className="sideBody">
-          <Sidebar menuState={openState}/>
+          <Sidebar/>
           <div className="bodyParte">
-            <Navbar changeMenuState={changeOpenState}/>
+            <Navbar/>
+            <StatusBar/>
             {children}
           </div>
         </div>
