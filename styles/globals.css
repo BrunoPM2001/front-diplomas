@@ -1,10 +1,8 @@
 html,
 body {
-  background-color: #dde5f4;
+  background-color: #EEEDED;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -41,4 +39,10 @@ a {
 }
 .bodyParte {
   flex: 1;
+  min-width: calc(100vw - 250px);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.bodyContent {
+  padding: 50px;
 }
