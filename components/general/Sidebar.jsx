@@ -41,7 +41,7 @@ export default function Sidebar () {
             )
           })
         }
-        <div className={styles.listElement}>
+        <div className={styles.listElement} onClick={() => closeSession()}>
           <LogoutIcon/>
           <p>Cerrar sesión</p>
         </div>
