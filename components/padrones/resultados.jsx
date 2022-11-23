@@ -1,12 +1,14 @@
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import styles from '../../styles/Padrones.module.css'
 
 export default function Resultados ({ loading, padrones = [] }) {
 
   const router = useRouter()
+  const pathName = usePathname()
 
   const sendTo = (refer) => {
-      router.push("/padrones/" + refer)
+    console.log(pathName)
+    router.push(pathName + "/" + refer)
   }
 
   if (!loading) {
@@ -42,7 +44,7 @@ export default function Resultados ({ loading, padrones = [] }) {
             </tr>
             {
               padrones.map(element => (
-                <tr className={styles.hoverEle} onClick={() => sendTo(element.REG_REGISTRO)}>
+                <tr className={styles.hoverEle} onClick={() => sendTo(element.REG_REGISTRO)} key={element.REG_REGISTRO}>
                   <td>{element.REG_REGISTRO}</td>
                   <td>{element.FEC_RESO_CU}</td>
                   <td>{element.RESO_NUM}</td>
