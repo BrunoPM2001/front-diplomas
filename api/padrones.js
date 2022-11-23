@@ -1,9 +1,9 @@
 const getAllP = async () => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/getAll', {
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/getAll', {
     method: "GET",
     headers: {
-      'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkbmkiOjcyNDU4NzYyLCJhcGVsbGlkb3MiOiJQb3JyYXMiLCJub21icmVzIjoiQnJ1bm8iLCJwYXNzd29yZCI6ImJwb3JyYXMxMjMiLCJjYXJnbyI6IkFETUlOIiwiaWF0IjoxNjY5MTQzNjg0LCJleHAiOjE2NjkxNzI0ODR9.1jkGDxuZ0tox6WAhKW66Kx7msv4lvRdcglUdFct44EQ"
+      'Authorization': localStorage.getItem("Token")
     }
   })
 
@@ -14,7 +14,7 @@ const getAllP = async () => {
 
 const getOneP = async (data) => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/getOne' + new URLSearchParams({
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/getOne?' + new URLSearchParams({
     registro: data
   }), {
     method: "GET",
@@ -25,7 +25,7 @@ const getOneP = async (data) => {
 
   //  Ver respuesta
   const response = await res.json()
-  return response
+  return response.padron
 }
 
 const generateFromExcelP = async (data) => {
@@ -34,7 +34,7 @@ const generateFromExcelP = async (data) => {
   file.append("File", data)
 
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/generateFromExcel', {
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/generateFromExcel', {
     method: "POST",
     headers: {
       'Authorization': localStorage.getItem("Token")
@@ -47,13 +47,23 @@ const generateFromExcelP = async (data) => {
   return result
 }
 
-const updateP = async (data) => {
-
+const updateP = async (reg, data) => {
+  //  Petición a la API
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/update?' + new URLSearchParams({
+    registro: reg
+  }), {
+    method: "PUT",
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': localStorage.getItem("Token")
+    },
+    body: JSON.stringify(data)
+  })
 }
 
 const restartP = async (data) => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/restart' + new URLSearchParams({
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/restart?' + new URLSearchParams({
     registro: data
   }), {
     method: "PUT",
@@ -69,7 +79,7 @@ const restartP = async (data) => {
 
 const deleteP = async (data) => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/deletePadron' + new URLSearchParams({
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/deletePadron?' + new URLSearchParams({
     registro: data
   }), {
     method: "DELETE",
@@ -89,7 +99,7 @@ const previsualizarDiplomaSegunPadronP = async (data) => {
   file.append("File", data)
 
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/previsualizarDiplomaSegunPadron', {
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/previsualizarDiplomaSegunPadron', {
     method: "POST",
     headers: {
       'Authorization': localStorage.getItem("Token")
@@ -105,7 +115,7 @@ const previsualizarDiplomaSegunPadronP = async (data) => {
 
 const previsualizarDiplomaP = async (data) => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/previsualizarDiploma' + new URLSearchParams({
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/previsualizarDiploma?' + new URLSearchParams({
     registro: data
   }), {
     method: "POST",
@@ -117,12 +127,12 @@ const previsualizarDiplomaP = async (data) => {
   //  Ver respuesta
   const pdf = await res.blob()
   const url = URL.createObjectURL(pdf)
-  console.log(url)
+  window.open(url)
 }
 
 const generarDiplomaP = async (data) => {
   //  Petición a la API
-  const res = await fetch('http://localhost:3005/api/padrones/generarDiploma' + new URLSearchParams({
+  const res = await fetch('https://api-padrones-diplomas.onrender.com/api/padrones/generarDiploma?' + new URLSearchParams({
     registro: data
   }), {
     method: "PUT",
