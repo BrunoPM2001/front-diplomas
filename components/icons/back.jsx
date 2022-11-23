@@ -1,6 +1,6 @@
 export default function BackIcon ( props ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" 
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-left" 
       viewBox="0 0 24 24" stroke-width="2.5"
       stroke-linecap="round" stroke-linejoin="round"
       width="25" height="25" stroke="#333333" fill="none"

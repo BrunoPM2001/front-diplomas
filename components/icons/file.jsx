@@ -1,6 +1,6 @@
 export default function FileUpload ( props ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-upload" 
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-file-upload" 
       viewBox="0 0 24 24" stroke-width="1.5"
       stroke-linecap="round" stroke-linejoin="round"
       width="35" height="35" stroke="#333333" fill="none"

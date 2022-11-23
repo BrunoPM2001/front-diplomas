@@ -1,6 +1,6 @@
 export default function SearchIcon ( props ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search"
       viewBox="0 0 24 24" stroke-width="3"
       stroke-linecap="round" stroke-linejoin="round"
       width="20" height="20" stroke="#2196F3" fill="none"

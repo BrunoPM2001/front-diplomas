@@ -1,6 +1,6 @@
 export default function FilterIcon ( props ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments" 
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-adjustments" 
       viewBox="0 0 24 24" stroke-width="1.5"
       stroke-linecap="round" stroke-linejoin="round"
       width="27" height="27" stroke="#333333" fill="none"

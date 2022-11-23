@@ -1,6 +1,6 @@
 export default function MenuIcon ( props ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2"
       viewBox="0 0 24 24" stroke-width="2.5"
       stroke-linecap="round" stroke-linejoin="round"
       width="30" height="30" stroke="#333333" fill="none"
