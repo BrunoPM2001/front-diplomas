@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLoginForm } from '../hooks/useForm'
-import { api_login } from '../api/login'
+import { loginU } from '../api/usuarios'
 import styles from '../styles/Login.module.css'
 
 export default function Login () {
@@ -12,7 +12,7 @@ export default function Login () {
   const router = useRouter()
 
   const handleLogin = async () => {
-    if (await api_login(loginForm)) {
+    if (await loginU(loginForm)) {
       router.push('inicio')
     } else {
       setError(true)
